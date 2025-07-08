@@ -86,7 +86,7 @@ body>.container {
     border-color: #D35D6E !important;
 }
 
-.btn-primary {
+.btn-light {
     background-color: #D35D6E;
     border-color: #D35D6E;
 }
@@ -95,4 +95,30 @@ body>.container {
 .card-body {
     background-color: #D2D0A0;
     color: black;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 100px;
+  position: relative;
+  top: 0;
+}
+
+.left-image {
+  width: 300px;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.right-image {
+  width: 300px;
+  transform: rotate(5deg);
+  transition: transform 0.3s ease;
+}
+
+.left-image:hover,
+.right-image:hover {
+  transform: rotate(0deg) scale(1.05);
 }
