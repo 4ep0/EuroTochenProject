@@ -34,57 +34,61 @@ function Denomination() {
     0.5, 0.2, 0.1, 0.05, 0.02, 0.01
   ];
 
-  const counts = {};
-  let remainingEUR = Math.round(amountEUR * 100); // Work in cents to avoid floating-point issues
+  const countsEUR = {};
+  const countsBGN = {};
+
+  let remainingEUR = Math.round(amountEUR * 100);
   let remainingBGN = Math.round(amountBGN * 100);
+
   denominations.forEach(denom => {
     const denomInCents = Math.round(denom * 100);
+
+    // EUR Denominations
     const countEUR = Math.floor(remainingEUR / denomInCents);
     if (countEUR > 0) {
-      counts[denom] = countEUR;
+      countsEUR[denom] = countEUR;
       remainingEUR -= countEUR * denomInCents;
     }
-  });
-  denominations.forEach(denom => {
-    const denomInCoins = Math.round(denom * 100);
-    const countBGN = Math.floor(remainingBGN / denomInCoins);
+
+    // BGN Denominations
+    const countBGN = Math.floor(remainingBGN / denomInCents);
     if (countBGN > 0) {
-      counts[denom] = countBGN;
-      remainingBGN -= countBGN * denomInCoins;
+      countsBGN[denom] = countBGN;
+      remainingBGN -= countBGN * denomInCents;
     }
   });
+
 
   // Render result
   let outputEUR = '<ul class="list-group">';
-  Object.keys(counts)
+  Object.keys(countsEUR)
     .map(Number)
     .sort((a, b) => b - a)
     .forEach(denom => {
-      const count = countEUR[denom];
-      const label = denom >= 5 ? `€${denom} banknote` :
-        denom >= 1 ? `€${denom} coin` :
-          `${Math.round(denom * 100)}¢ coin`;
+      const count = countsEUR[denom]; // ✅ CORRECT variable
+      const label = denom >= 5 ? `€${denom}` :
+        denom >= 1 ? `€${denom}` :
+          `${Math.round(denom * 100)}¢`;
       outputEUR += `<li class="list-group-item d-flex justify-content-between">
-                   <span>${label}</span>
-                   <span>x ${count}</span>
-                 </li>`;
+                    <span>${label}</span>
+                    <span>x ${count}</span>
+                  </li>`;
     });
-  outputEUR += '</ul>';
 
   //Lev denomination
   let outputBGN = '<ul class="list-group">';
-  Object.keys(countsBGN).map(Number).sort((a, b) => b - a).forEach(denom => {
-    const count = countBGN[denom];
-    const label = denom >= 5 ? `${denom} leva` :
-      denom >= 1 ? `${denom} leva` :
-        `${Math.round(denom * 100)} stotinki`;
-    outputBGN += `<li class="list-group-item d-flex justify-content-between">
-                   <span>${label}</span>
-                   <span>x ${count}</span>
-                 </li>`;
-  });
-  outputBGN += '</ul>';
-
-  document.getElementById('resultEUR').innerHTML = outputEUR;
+  Object.keys(countsBGN)
+    .map(Number)
+    .sort((a, b) => b - a)
+    .forEach(denom => {
+      const count = countsBGN[denom]; // ✅ CORRECT variable
+      const label = denom >= 1 ? `${denom} лв.` :
+        `${Math.round(denom * 100)} ст.`;
+      outputBGN += `<li class="list-group-item d-flex justify-content-between">
+                    <span>${label}</span>
+                    <span>x ${count}</span>
+                  </li>`;
+    });
   document.getElementById('resultBGN').innerHTML = outputBGN;
+  document.getElementById('resultEUR').innerHTML = outputEUR;
 }
