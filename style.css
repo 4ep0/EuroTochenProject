@@ -10,7 +10,7 @@ body>.container {
 /* Navbar container */
 .navbar {
     background-color: #D2D0A0 !important;
-    height: 70px;
+
 
 
 }
@@ -22,6 +22,7 @@ body>.container {
     color: #537D5D;
     /* Bootstrap primary color */
     transition: color 0.3s ease;
+    padding: 0 !important;
 }
 
 .navbar-brand:hover {
@@ -60,10 +61,7 @@ body>.container {
 
 .rounded-pill-input {
     border-radius: 50rem !important;
-    padding-left: 15px;
-    height: 38px;
-    font-size: 1rem;
-    width: 300px;
+    padding-left: 20px;
 }
 
 #footer {
@@ -83,10 +81,14 @@ body>.container {
     border-bottom-right-radius: 25px !important;
 }
 
-label {
+#changeBGN {
+    margin-left: 25px;
+}
+
+/* label {
     font-weight: 500;
     font-size: 50px;
-}
+} */
 
 #MoneySubmit {
     background-color: #D35D6E !important;
