@@ -19,18 +19,24 @@ function CurrencyCalculator() {
     document.getElementById("changeBGN").value = roundedMoneyBGN;
     document.getElementById("changeEUR").value = roundedMoneyEUR;
   }
-  else console.log("Smetkata e po golqma ot dadenite pari");
+  else {
+    const myModal = new bootstrap.Modal(document.getElementById('exampleModal')).show();
+  }
 }
+
+
 function roundUp(num, decimals) {
   const factor = Math.pow(10, decimals);
   return Math.ceil(num * factor) / factor;
 }
+
+
 function Denomination() {
   let amountEUR = parseFloat(document.getElementById("changeEUR").value);
   let amountBGN = parseFloat(document.getElementById("changeBGN").value);
 
   const denominations = [
-    500, 200, 100, 50, 20, 10, 5, 2, 1,
+    100, 50, 20, 10, 5, 2, 1,
     0.5, 0.2, 0.1, 0.05, 0.02, 0.01
   ];
 
