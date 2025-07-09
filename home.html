@@ -59,31 +59,26 @@
       <img src="100lv.jpg" alt="Снимка 1" class="left-image">
       <img src="100eur.jpg" alt="Снимка 2" class="right-image">
     </div>
-    <div class="container pb-4">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="collapse multi-collapse" id="multiCollapseExample1">
-            <div class="card card-body">
-              <h4 class="text-center">Лев</h4>
-              <p class="collapse-text">
-                Левът е паричната единица на България, емитирана от БНБ. Името
-                му произхожда от думата „лъв“. Съвременната история на
-                българските парични знаци започва след възстановяването на
-                българската държава през 1878 година.
-              </p>
-            </div>
+   
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="collapse multi-collapse" id="multiCollapseExample1" style="padding-bottom: 40px;">
+          <div class="card card-body">
+            <h4 class="text-center">Лев</h4>
+            <p class="collapse-text">
+              Левът е паричната единица на България, емитирана от БНБ. Името му произхожда от думата „лъв“. Съвременната история на българските парични знаци започва след възстановяването на българската държава през 1878 година. 
+            </p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="collapse multi-collapse" id="multiCollapseExample2">
-            <div class="card card-body">
-              <h4 class="text-center">Евро</h4>
-              <p class="collapse-text">
-                Евро е валутата на Еврозоната и е въведено през 1999 г. за
-                безналични разплащания и през 2002 г. за банкноти и монети.
-                Разделя се на 100 цента. Очаква се България да приеме еврото на
-                1 януари 2026 г., което ще я направи 21-вата страна-членка на
-                еврозоната.
+      </div>
+      <div class="col-md-6">
+        <div class="collapse multi-collapse" id="multiCollapseExample2" style="padding-bottom: 40px;">
+          <div class="card card-body">
+            <h4 class="text-center">Евро</h4>
+            <p class="collapse-text">
+              Евро е валутата на Еврозоната и е въведено през 1999 г. за безналични разплащания и през 2002 г. за банкноти и монети. Разделя се на 100 цента. Очаква се България да приеме еврото на 1 януари 2026 г., което ще я направи 21-вата страна-членка на еврозоната. 
 
               </p>
             </div>
@@ -92,10 +87,23 @@
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-  </body>
+
+<script>
+    document.querySelector('.big-button').addEventListener('click', function () {
+      setTimeout(() => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
+      }, 200);
+    });
+  </script>
+
+        
+            <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
