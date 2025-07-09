@@ -20,7 +20,17 @@ function CurrencyCalculator() {
     document.getElementById("changeEUR").value = roundedMoneyEUR;
   }
   else {
-    const myModal = new bootstrap.Modal(document.getElementById('exampleModal')).show();
+    const myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    myModal.show();
+    console.log(myModal);
+    let modalContent = document.getElementById("exampleModal").getElementsByClassName('modal-body');
+    if (moneyGivenEUR < billInput) {
+      modalContent[0].textContent = "Дадените пари са по-малко от сметката.";
+    }
+    else if (moneyInput.value = " " || changeEUR.value == " ") {
+      modalContent[0].textContent = "Въведете правилните стойности.";
+    }
+
   }
 }
 

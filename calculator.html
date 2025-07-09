@@ -17,7 +17,11 @@
       <form class="pt-4 row justify-content-center">
         <div class="mb-3 col-12 col-lg-6">
           <label for="moneyGiven" class="form-label fs-5">Дадени пари</label>
-          <input type="text" class="form-control" id="moneyGiven">
+          <div class="input-group d-flex mb-3">
+            <input type="text" class="form-control" id="moneyGiven">
+            <span class="input-group-text"
+              id="moneyGivenAddon">BGN</span>
+          </div>
         </div>
         <div class="mb-3 col-12 col-lg-6">
           <label for="billAmount"
@@ -26,35 +30,39 @@
             id="billAmount">
         </div>
 
-        <button type="button" class="btn btn-primary col-md-auto col-10 mb-3 mx-2"
+        <button type="button"
+          class="btn btn-primary col-md-auto col-10 mb-3 mx-2"
           onclick="CurrencyCalculator(), Denomination()">Пресметни</button>
       </form>
     </div>
-      
-    
+
     <!--OUTPUT CONTAINER-->
     <div class="container-lg">
       <div class="row justify-content-center">
         <hr class="col-12 mt-4 d-md-none" />
-        
-        <div class="col-12 col-lg-6 fs-5 mt-2 align-items-center d-flex flex-column">
+
+        <div
+          class="col-12 col-lg-6 fs-5 mt-2 align-items-center d-flex flex-column">
           <div class="col-12 col-md-6 col-lg-10">
             <label class="form-label" for="changeBGN">Ресто (лв.)</label>
             <input type="text" class="form-control" id="changeBGN" readonly>
           </div>
-          <div class="mt-4 col-12 col-md-6 col-lg-10" id="resultBGN">resultbgn</div>
+          <div class="mt-4 col-12 col-md-6 col-lg-10"
+            id="resultBGN">resultbgn</div>
         </div>
 
         <hr class="col-12 mt-4 d-md-none" />
-        
-        <div class="col-12 col-lg-6 fs-5 mt-2 align-items-center d-flex flex-column">
+
+        <div
+          class="col-12 col-lg-6 fs-5 mt-2 align-items-center d-flex flex-column">
           <div class="col-12 col-md-6 col-lg-10">
             <label class="form-label" for="changeEUR">Ресто (€)</label>
             <input type="text" class="form-control" id="changeEUR" readonly>
           </div>
-          <div class="mt-4 col-12 col-md-6 col-lg-10" id="resultEUR">resulteur</div>
+          <div class="mt-4 col-12 col-md-6 col-lg-10"
+            id="resultEUR">resulteur</div>
         </div>
-      
+
       </div>
     </div>
 
@@ -64,7 +72,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Грешни
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Невалидни
               стойности</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal"
               aria-label="Close"></button>

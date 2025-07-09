@@ -85,8 +85,7 @@ body>.container {
 .input-group-text {
     margin-left: -5px;
     border: 1px solid transparent !important;
-    border-top-right-radius: 25px !important;
-    border-bottom-right-radius: 25px !important;
+
 }
 
 #MoneySubmit {
