@@ -88,9 +88,10 @@ body>.container {
 
 }
 
-#MoneySubmit {
+.btn-primary {
     background-color: #B77C7B !important;
     border-color: #B77C7B !important;
+    font-size: 40px;
 }
 
 .btn-light {
