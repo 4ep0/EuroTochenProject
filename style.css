@@ -1,5 +1,9 @@
 body {
-    background-color: #9EBC8A !important;
+    /* font-family: 'Courier New', Courier, monospace !important; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; */
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; */
+    background-color: #B9D4AA !important;
 }
 
 
@@ -9,7 +13,7 @@ body>.container {
 
 /* Navbar container */
 .navbar {
-    background-color: #D2D0A0 !important;
+    background-color: #FAFFCA !important;
 
 
 
@@ -19,27 +23,31 @@ body>.container {
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
-    color: #537D5D;
+    color: #5A827E;
     /* Bootstrap primary color */
     transition: color 0.3s ease;
     padding: 0 !important;
 }
 
+.navbar-brand:focus {
+    color: #5A827E;
+}
+
 .navbar-brand:hover {
-    color: lightgreen;
+    color: #84AE92;
 }
 
 /* Navbar links */
 .nav-link {
     font-size: 1rem;
     color: #495057;
-    margin-right: 15px;
+    margin: 0 10px;
     transition: color 0.2s ease-in-out;
 
 }
 
 .nav-link:hover {
-    color: #D35D6E;
+    color: #B77C7B;
 
 }
 
@@ -65,7 +73,7 @@ body>.container {
 }
 
 #footer {
-    background-color: #D2D0A0;
+    background-color: #FAFFCA;
 }
 
 .oblo-input {
@@ -82,13 +90,13 @@ body>.container {
 }
 
 #MoneySubmit {
-    background-color: #D35D6E !important;
-    border-color: #D35D6E !important;
+    background-color: #B77C7B !important;
+    border-color: #B77C7B !important;
 }
 
 .btn-light {
-    background-color: #D35D6E;
-    border-color: #D35D6E;
+    background-color: #B77C7B;
+    border-color: #B77C7B;
 }
 
 
@@ -98,27 +106,27 @@ body>.container {
 }
 
 .image-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 10px 100px;
-  position: relative;
-  top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    position: relative;
+    top: 0;
 }
 
 .left-image {
-  width: 300px;
-  transform: rotate(-5deg);
-  transition: transform 0.3s ease;
+    width: 300px;
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
 }
 
 .right-image {
-  width: 300px;
-  transform: rotate(5deg);
-  transition: transform 0.3s ease;
+    width: 300px;
+    transform: rotate(5deg);
+    transition: transform 0.3s ease;
 }
 
 .left-image:hover,
 .right-image:hover {
-  transform: rotate(0deg) scale(1.05);
+    transform: rotate(0deg) scale(1.05);
 }
